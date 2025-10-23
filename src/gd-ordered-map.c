@@ -89,7 +89,7 @@ void* gd_omap_get(gd_omap* m, gd__omap_keyT key) {
     size_t i = target_index;
     size_t max = m->capacity;
     probe:
-    for (gd_omap_bucket* b = m->buckets[i]; i < max; i++) {
+    for (gd_omap_bucket* b; (b = m->buckets[i]) && i < max; i++) {
         if (!b) {
             return NULL;
         }
