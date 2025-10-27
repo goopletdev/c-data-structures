@@ -1,2 +1,2 @@
-# c-data-structures
+# gd
 Collection of C data structures
